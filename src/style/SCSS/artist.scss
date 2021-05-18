@@ -1,0 +1,153 @@
+@import "./style.scss";
+
+body main {
+    section#s1 {
+        padding: 0 30% 5vh 25%;
+        @media #{$extra-large-down} {
+            padding: 0 25% 5% 25%;
+        }
+        @media #{$large-down} {
+            padding: 0 15% 5% 15%;
+        }
+        @media #{$small-down} {
+            padding: 0 5% 5% 5%;
+        }
+
+        display: grid;
+        img {
+            grid-column: 1;
+            grid-row: 1;
+            width: 100%;
+            border-radius: 0 0 20px 20px;
+            opacity: 0.8;
+            animation: fallingDown 1s ease;
+        }
+        div#artist-infos__container {
+            grid-column: 1;
+            grid-row: 1;
+            margin: 7% 0 0 7%;
+            position: relative;
+            div#artist__card {
+                background: rgba(255, 255, 255, 0.7);
+                width: fit-content;
+                padding: 3%;
+                border-radius: 20px;
+                @include shadow;
+                height: fit-content;
+                margin-bottom: 2vh;
+                h1#artistName {
+                    font-size: 2vw;
+                    text-transform: uppercase;
+                    margin-bottom: 2vw;
+                    font-family: "Comfortaa", sans-serif;
+                }
+            }
+            div#button.button {
+                padding: 0 2vw;
+                background: rgb(252, 253, 152);
+                opacity: 0.7;
+            }
+        }
+    }
+    section#s2,
+    section#s3 {
+        padding: 0 10% 5% 10%;
+        h2 {
+            font-size: 3vw;
+            font-family: 'Comfortaa', sans-serif;
+            font-weight: 700;
+        }
+    }
+
+    section#s2 {
+        @media #{$extra-large-down} {
+            padding: 0 25%;
+        }
+        @media #{$large-down} {
+            padding: 0 15%;
+        }
+        @media #{$small-down} {
+            padding: 0 5%;
+        }
+        h2 span {
+            color: rgb(101, 101, 168);
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        ul#tracksList {
+            margin-top: 5%;
+            padding: 5%;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            li.topTrack {
+                a {
+                    &:hover {
+                        cursor: pointer;
+                        color: rgb(252, 255, 90);
+                    }
+                    p {
+                        font-size: 2vw;
+                        line-height: 180%;
+                        text-align: end;
+                    }
+                } 
+            }
+        }
+    }
+
+    section#s3 {
+        @media #{$extra-large-down} {
+            padding: 5% 10% 0 10%;
+        }
+        @media #{$small-down} {
+            padding: 5% 5% 0 5%;
+        }
+        @media #{$extra-small-down} {
+            padding: 3% 3% 0 3%;
+        }
+        ul#albumsList {
+            margin-top: 5%;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 20px;
+            column-gap: 20px;
+            justify-content: center;
+            a figure {
+                display: flex;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                figcaption {
+                    position: absolute;
+                    opacity: 0; 
+                    transition: opacity 400ms ease;                
+                    font-size: 2em;
+                    font-family: 'Comfortaa', sans-serif;
+                    padding: 0 10%;
+                    text-align: center;
+
+                }
+                &:hover figcaption {
+                    opacity: 1;
+                    z-index: 3;
+                }
+                img {
+                    opacity: 0.8;
+                    transition: opacity 400ms ease;  
+                    border-radius: 20px;
+                    @media #{$medium-down} {
+                        max-width: 33vw;
+                    }
+                    @media #{$small-down} {
+                        max-width: 42.5vw;
+                    }
+                    
+                }
+                &:hover img {
+                    opacity: 0.1;
+                }
+            }
+
+        }
+    }
+}

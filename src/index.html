@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="./STYLE/SCSS/home.css">
+    <title>Deezweb</title>
+</head>
+
+<body>
+
+    <header>
+        <p id="logo">deezweb</p>
+        <nav>
+            <ul>
+                <li>
+                    <a id="searchLink" href="index.html">
+                        <p>Recherche</p>
+                    </a>
+                </li>
+                <li>
+                    <a id="favoritesLink" href="./pages/favorites.html">
+                        <p>Favoris</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-btn">
+            <div class="menu-btn__burger"></div>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section id="s1">
+            <div>
+                <input type="text" id="searchInput" placeholder="Recherche...">
+            </div>
+
+
+            <div id="radios__container">
+                <h2>Trier par :</h2>
+
+                <fieldset>
+                    <div>
+                        <input type="radio" name="order" class="order" id="rankingOrder" value="RANKING" checked>
+                        <label for="rankingOrder">Popularité</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="order" class="order" id="ratingOrder" value="RATING_ASC">
+                        <label for="ratingOrder">Classement</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="order" class="order" id="albumOrder" value="ALBUM_ASC">
+                        <label for="albumOrder">Album</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="order" class="order" id="artistOrder" value="ARTIST_ASC">
+                        <label for="artistOrder">Artiste</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="order" class="order" id="trackOrder" value="TRACK_ASC">
+                        <label for="trackOrder">Morceau</label>
+                    </div>
+                </fieldset>
+            </div>
+
+        </section>
+
+
+        <section id="s2">
+            <h2 class="seo">Résultats</h2>
+            <ul id="trackContainer"></ul>
+        </section>
+
+    </main>
+
+    <script src="./JS/menuBurger.js"></script>
+    <script src="./JS/updateStorage.js"></script>
+    <script src="./JS/index.js"></script>
+    <script src="./JS/secondsToHms.js"></script>
+</body>
+
+</html>

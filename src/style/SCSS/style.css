@@ -1,0 +1,546 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&display=swap");
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* apply a natural box layout model to all elements */
+*,
+*::before,
+*::after,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* inputs */
+input,
+button,
+textarea,
+select {
+  color: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  -webkit-padding-start: 0;
+  align-items: flex-start;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  height: auto;
+  line-height: 1em;
+}
+
+/* inputs appearance (not for every input)  */
+input[type=text],
+input[type=reset],
+input[type=password],
+input[type=search],
+input[type=email],
+input[type=tel],
+input[type=url],
+input[type=time],
+input[type=week],
+input[type=month],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=number],
+input[type=submit],
+input[type=color],
+input[type=file],
+button,
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Remove controls from Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  /* Removes leftover margin */
+}
+
+/* input color width */
+input[type=color] {
+  width: 1em;
+}
+
+/* IE clear cross */
+input::-ms-clear {
+  display: none;
+}
+
+/* details and summary */
+details,
+summary {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* text size adjusting */
+body {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* mark */
+mark {
+  background: none;
+}
+
+/* Font smoothing */
+*,
+*::before,
+*::after,
+*:before,
+*:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* hr */
+hr {
+  height: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+/* u */
+u {
+  text-decoration: none;
+}
+
+/* th */
+table th {
+  text-align: left;
+}
+
+/* a */
+a {
+  color: inherit;
+  outline: none;
+}
+
+.seo {
+  display: none;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Mulish", sans-serif, serif;
+  font-weight: 500;
+  color: #7878a7;
+  background: #cfebf8;
+  background: linear-gradient(270deg, #ffd4dc, #cfebf8);
+  background-size: 400% 400%;
+  animation: gradientBackground 30s ease infinite;
+}
+body main section {
+  padding: 5% 10%;
+}
+@media only screen and (max-width: 768px) {
+  body main section {
+    padding: 5%;
+    font-size: 60%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  body main section#s1 {
+    padding: 3% 15% 0 15%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  body main section#s2 {
+    padding: 3% 15% 15% 15%;
+  }
+}
+body header {
+  position: relative;
+  padding: 2.7% 15% 0 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: url("https://images.unsplash.com/photo-1619583473363-63cfa0944746?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80");
+  background-size: 100%;
+  background-position: top;
+  background-attachment: fixed;
+  -webkit-box-shadow: 0px 2px 4px rgba(61, 61, 61, 0.12), 0px 8px 24px rgba(41, 41, 41, 0.08);
+  -moz-box-shadow: 0px 2px 4px rgba(61, 61, 61, 0.12), 0px 8px 24px rgba(41, 41, 41, 0.08);
+  box-shadow: 0px 2px 4px rgba(61, 61, 61, 0.12), 0px 8px 24px rgba(41, 41, 41, 0.08);
+  z-index: 2;
+}
+@media only screen and (max-width: 992px) {
+  body header {
+    padding: 2.7% 10% 0 10%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body header {
+    padding: 2.7% 5% 2.7% 5%;
+  }
+}
+body header p#logo {
+  font-family: "Comfortaa";
+  font-weight: 600;
+  font-size: 6vw;
+  letter-spacing: -0.7vw;
+  color: #fcfd98;
+  cursor: default;
+}
+@media only screen and (max-width: 576px) {
+  body header nav {
+    opacity: 0;
+    background: #bce3f6;
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 24px 16px;
+    transform: translateX(-5vw);
+    transition: opacity 500ms ease;
+  }
+  body header nav.open {
+    display: block;
+    animation: navRightToLeft 0.7s;
+    opacity: 1;
+  }
+}
+body header nav ul {
+  display: flex;
+}
+body header nav ul li {
+  font-family: "Mulish", sans-serif, sans-serif;
+  font-size: 1.5vw;
+  margin-left: 3vw;
+  text-transform: uppercase;
+  color: white;
+}
+@media only screen and (max-width: 576px) {
+  body header nav ul li {
+    font-size: 2.2vw;
+  }
+}
+body header .menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  z-index: 3;
+}
+@media only screen and (min-width: 576px) {
+  body header .menu-btn {
+    display: none;
+  }
+}
+body header .menu-btn__burger {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+}
+body header .menu-btn__burger::before, body header .menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+}
+body header .menu-btn__burger::before {
+  transform: translateY(-8px);
+}
+body header .menu-btn__burger::after {
+  transform: translateY(8px);
+}
+body header .menu-btn.open .menu-btn__burger {
+  transform: translateX(-25px);
+  background: transparent;
+  box-shadow: none;
+}
+body header .menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(16px, -16px);
+}
+body header .menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(16px, 16px);
+}
+
+.button {
+  width: fit-content;
+  -webkit-box-shadow: 0px 2px 4px rgba(61, 61, 61, 0.12), 0px 8px 24px rgba(41, 41, 41, 0.08);
+  -moz-box-shadow: 0px 2px 4px rgba(61, 61, 61, 0.12), 0px 8px 24px rgba(41, 41, 41, 0.08);
+  box-shadow: 0px 2px 4px rgba(61, 61, 61, 0.12), 0px 8px 24px rgba(41, 41, 41, 0.08);
+  cursor: pointer;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  padding: 10px 20px;
+  line-height: 32px;
+  border-radius: 20px;
+  background: white;
+  transition: all 250ms ease;
+}
+@media only screen and (max-width: 450px) {
+  .button {
+    font-size: 0.6em;
+    line-height: 12px;
+    padding: 0 12px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .button {
+    padding: 0 15px;
+  }
+}
+.button:hover {
+  background: #feffc0;
+  font-weight: 500;
+}
+
+a {
+  transition: all 250ms ease;
+}
+a:hover {
+  transform: scale(1.1);
+}
+
+div.favCtnr {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+div.favCtnr input:checked + label {
+  color: #f5a8b7;
+  will-change: font-size;
+  animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}
+div.favCtnr label {
+  color: #aab8c2;
+  cursor: pointer;
+  font-size: 3vw;
+  align-self: center;
+  transition: color 0.2s ease-in-out;
+}
+div.favCtnr label:hover {
+  color: grey;
+}
+div.favCtnr label::selection {
+  color: transparent;
+  background: transparent;
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes heart {
+  0%, 17.5% {
+    font-size: 0;
+  }
+}
+@keyframes fallingDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes rightToLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes navRightToLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-5vw);
+  }
+}
+@keyframes climbingUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

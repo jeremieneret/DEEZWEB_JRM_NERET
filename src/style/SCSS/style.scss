@@ -1,0 +1,275 @@
+@import "../tools/imports.scss";
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: $Mulish, serif;
+    font-weight: 500;
+    color: rgb(120, 120, 167);
+    background: #cfebf8;
+    background: linear-gradient(270deg, #ffd4dc, #cfebf8);
+    background-size: 400% 400%;
+    animation: gradientBackground 30s ease infinite;
+    main section {
+        padding: 5% 10%;
+        @media #{$medium-down} {
+            padding: 5%;
+            font-size: 60%;
+        }
+        &#s1 {
+            @media #{$large-up} {
+                padding: 3% 15% 0 15%;
+            }
+        }
+        &#s2 {
+            @media #{$large-up} {
+                padding: 3% 15% 15% 15%;
+            }
+        }
+    }
+
+    header {
+        position: relative;
+        padding: 2.7% 15% 0 15%;
+        @media #{$large-down} {
+            padding: 2.7% 10% 0 10%;
+        }
+        @media #{$medium-down} {
+            padding: 2.7% 5% 2.7% 5%;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: url("https://images.unsplash.com/photo-1619583473363-63cfa0944746?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80");
+        background-size: 100%;
+        background-position: top;
+        background-attachment: fixed;
+        @include shadow;
+        z-index: 2;
+        p#logo {
+            font-family: "Comfortaa";
+            font-weight: 600;
+            font-size: 6vw;
+            letter-spacing: -0.7vw;
+            color: rgb(252, 253, 152);
+            cursor: default;
+        }
+        nav {
+            @media #{$small-down} {
+                opacity: 0;
+                background: #bce3f6;
+                cursor: pointer;
+                z-index: 1;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                padding: 24px 16px;
+                transform: translateX(-5vw);
+                transition: opacity 500ms ease;
+                &.open {
+                    display: block;
+                    animation: navRightToLeft 0.7s;
+                    opacity: 1;
+                }
+            }
+            ul {
+                display: flex;
+                li {
+                    font-family: $Mulish, sans-serif;
+                    font-size: 1.5vw;
+                    margin-left: 3vw;
+                    text-transform: uppercase;
+                    color: white;
+                    @media #{$small-down} {
+                        font-size: 2.2vw;
+                    }
+                }
+            }
+        }
+        .menu-btn {
+            @media #{$small-up} {
+                display: none;
+            }
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+            z-index: 3;
+
+            &__burger {
+                width: 25px;
+                height: 3px;
+                background: white;
+                border-radius: 5px;
+                transition: all 0.4s ease-in-out;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 25px;
+                    height: 3px;
+                    background: white;
+                    border-radius: 5px;
+                    transition: all 0.4s ease-in-out;
+                }
+
+                &::before {
+                    transform: translateY(-8px);
+                }
+
+                &::after {
+                    transform: translateY(8px);
+                }
+            }
+        }
+        .menu-btn.open .menu-btn__burger {
+            transform: translateX(-25px);
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .menu-btn.open .menu-btn__burger::before {
+            transform: rotate(45deg) translate(16px, -16px);
+        }
+
+        .menu-btn.open .menu-btn__burger::after {
+            transform: rotate(-45deg) translate(16px, 16px);
+        }
+    }
+}
+
+.button {
+    width: fit-content;
+    @include shadow;
+    cursor: pointer;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    @media #{$extra-small-down} {
+        font-size: 0.6em;
+        line-height: 12px;
+        padding: 0 12px;
+    }
+    padding: 10px 20px;
+    @media #{$small-down} {
+        padding: 0 15px;
+    }
+    line-height: 32px;
+    border-radius: 20px;
+    background: white;
+    transition: all 250ms ease;
+    &:hover {
+        background: rgb(254, 255, 192);
+        font-weight: 500;
+    }
+}
+
+a {
+    transition: all 250ms ease;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+div.favCtnr {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+
+    input {
+        &:checked + label {
+            color: #f5a8b7;
+            will-change: font-size;
+            animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+        }
+    }
+
+    label {
+        color: #aab8c2;
+        cursor: pointer;
+        font-size: 3vw;
+        align-self: center;
+        transition: color 0.2s ease-in-out;
+        &:hover {
+            color: grey;
+        }
+        &::selection {
+            color: transparent;
+            background: transparent;
+        }
+    }
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes heart {
+    0%,
+    17.5% {
+        font-size: 0;
+    }
+}
+
+//ANIMATION
+@keyframes fallingDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rightToLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes navRightToLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-5vw);
+    }
+}
+
+@keyframes climbingUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}

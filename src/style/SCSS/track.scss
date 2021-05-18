@@ -1,0 +1,139 @@
+@import "./style.scss";
+
+body main {
+    section {
+        &#s1 {
+            padding: 0 15% 3% 15%;
+            div#artist__container {
+                display: flex;
+                position: relative;
+                @media #{$medium-down} {
+                    display: grid;
+                }
+                div#artist-info__card {
+                    width: 200%;
+                    animation: fallingDown 1s ease;
+                    @media #{$large-down} {
+                        width: 50%;
+                    }
+                    @media #{$medium-down} {
+                        grid-column: 1;
+                        grid-row: 1;
+                        width: 100%;
+                    }
+                    background: white;
+                    border-radius: 0 0 20px 20px;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        opacity: 0.8;
+                        @media #{$medium-down} {
+                            opacity: 0.7;
+                            border-radius: 0 0 20px 20px;
+                        }
+                    }
+                    a p#artistName {
+                        padding: 5%;
+                        font-size: 1.5vw;
+                        font-family: "Comfortaa", sans-serif;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                        z-index: 1;
+                        border-radius: 0 0 20px 20px;
+                        transition: color 400ms ease;
+                        &:hover {
+                            color: #ffb3ba;
+                        }
+                        @media #{$medium-down} {
+                            padding: 0;
+                            position: absolute;
+                            font-size: 5vw;
+                            margin-top: 2vh;
+                        }
+                    }
+                }
+            }
+            div#player__container {
+                width: 50%;
+                padding: 10%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                animation: rightToLeft 1200ms ease;
+                @media #{$medium-down} {
+                    width: 100%;
+                    padding: 0;
+                    grid-column: 1;
+                    grid-row: 1;
+                    justify-content: flex-start;
+                    background: linear-gradient(#FDD3DB 0%, transparent 30%);
+                    z-index: 1;
+                    audio#player {
+                        position: absolute;
+                        width: 20vw;
+                        height: 4vh;
+                        bottom: 0;
+                        @media #{$medium-down} {
+                            width: 100%;
+                        }
+                    }
+                }
+                figcaption {
+                    margin-bottom: 2vh;
+                    @media #{$medium-down} {
+                        display: none;
+                    }
+                }
+            }
+            h1 {
+                font-size: 4em;
+                font-family: "Comfortaa";
+                font-weight: 600;
+                position: relative;
+                color: rgb(252, 253, 152);
+                @media #{$medium-down} {
+                    font-size: 8vw;
+                    padding: 5%;
+                }
+            }
+        }
+
+        &#s2 {
+            display: flex;
+            justify-content: space-between;
+            @media #{$medium-down} {
+                justify-content: flex-end;
+                margin-top: 5vh;
+            }
+            padding-bottom: 10%;
+            div#albumInfos {
+                align-items: flex-end;
+                text-align: end;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 5%;
+                p {
+                    font-size: 1.5vw;
+                }
+                .album-title {
+                    font-size: 3vw;
+                }
+            }
+            img {
+                width: 50%;
+                border-radius: 20px;
+                opacity: 0.7;
+            }
+            .button {
+                padding: 0 2vw;
+            }
+
+            div.favCtnr {
+                height: auto;
+                display: block;
+                text-align: end;
+            }
+        }
+    }
+}

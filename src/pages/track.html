@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../style/SCSS/track.css">
+    <title>Deezweb : track</title>
+</head>
+
+<body>
+
+    <header>
+        <p id="logo">deezweb</p>
+        <nav>
+            <ul>
+                <li>
+                    <a id="searchLink" href="../index.html">
+                        <p>Recherche</p>
+                    </a>
+                </li>
+                <li>
+                    <a id="favoritesLink" href="../pages/favorites.html">
+                        <p>Favoris</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-btn">
+            <div class="menu-btn__burger"></div>
+        </div>
+    </header>
+
+    <main>
+        <section id="s1">
+
+            <div id="artist__container">
+                <div id="artist-info__card">
+                    <img id="artistPic" src="#" alt="">
+                    <a id="artistLink" href="">
+                        <p id="artistName">Nom du groupe ou de l'artiste</p>
+                    </a>
+                </div>
+
+                <div id="player__container">
+                    <h1 id="trackTitle">Titre du morceau</h1>
+                    <figure>
+                        <figcaption>Écouter un extrait :</figcaption>
+                        <audio id='player' controls src="#">
+                            Votre navigateur n'aime pas la
+                            <code>musique</code>.
+                        </audio>
+                    </figure>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="s2">
+
+            <div id="albumInfos">
+                <h2 class="seo">Infos de l'album</h2>
+                <a id="albumLink" href="#"></a>
+                <p id="releaseDate">Date de sortie</p>
+                <p id="duration">Durée du morceau</p>
+                <a class="button" id="deezLink" href="">Écouter sur Deezer</a>
+                <div class="favCtnr">
+                    
+                </div>
+            </div>
+            <img id="albumCover" src="#" alt="pochette de l'album">
+
+        </section>
+    </main>
+
+    <script src="../JS/menuBurger.js"></script>
+    <script src="../JS/updateStorage.js"></script>
+    <script src="../JS/track.js"></script>
+    <script src="../JS/secondsToHms.js"></script>
+</body>
+
+</html>

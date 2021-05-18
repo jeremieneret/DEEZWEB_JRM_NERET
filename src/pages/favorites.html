@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../style/SCSS/favorites.css">
+    <title>Deezweb : favoris</title>
+</head>
+
+<body>
+
+    <header>
+        <p id="logo">deezweb</p>
+        <nav>
+            <ul>
+                <li>
+                    <a id="searchLink" href="../index.html">
+                        <p>Recherche</p>
+                    </a>
+                </li>
+                <li>
+                    <a id="favoritesLink" href="../pages/favorites.html">
+                        <p>Favoris</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-btn">
+            <div class="menu-btn__burger"></div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="seo">Liste des favoris</h2>
+            <ul id="favoritesList"></ul>
+        </section>
+    </main>
+
+
+    <script src="../JS/menuBurger.js"></script>
+    <script src="../JS/favorites.js"></script>
+    <script src="../JS/updateStorage.js"></script>
+</body>
+
+</html>

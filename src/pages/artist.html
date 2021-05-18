@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../style/SCSS/artist.css">
+    <title>Deezweb : artist</title>
+</head>
+
+<body>
+
+    <header>
+        <p id="logo">deezweb</p>
+        <nav>
+            <ul>
+                <li>
+                    <a id="searchLink" href="../index.html">
+                        <p>Recherche</p>
+                    </a>
+                </li>
+                <li>
+                    <a id="favoritesLink" href="../pages/favorites.html">
+                        <p>Favoris</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-btn">
+            <div class="menu-btn__burger"></div>
+        </div>
+    </header>
+
+    <main>
+        <section id="s1">
+            <img id="artistPic" src="#" alt="photo de l'artiste">
+            <div id="artist-infos__container">
+                <div id="artist__card">
+                    <h1 id="artistName">Nom de l'artiste</h1>
+                    <h2 id="numberOfAlbums">Nombre d'albums</h2>
+                    <p id="numberOfFans">Nombre de fans</p>
+                </div>
+                <div class="button" id="button">
+                    <a id="deezArtistPage" href="">Voir sur Deezer</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="s2">
+            <h2 id="s2Title">Top 5 de l'artiste sur Deezer :</h2>
+            <ul id="tracksList"></ul>
+        </section>
+
+        <section id="s3">
+            <h2>Albums :</h2>
+            <ul id="albumsList"></ul>
+        </section>
+    </main>
+
+    <script src="../JS/menuBurger.js"></script>
+    <script src="../JS/artist.js"></script>
+    <script src="../JS/secondsToHms.js"></script>
+</body>
+
+</html>

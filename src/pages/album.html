@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../style/SCSS/album.css">
+    <title>Deezweb : album</title>
+</head>
+
+<body>
+
+    <header>
+        <p id="logo">deezweb</p>
+        <nav>
+            <ul>
+                <li>
+                    <a id="searchLink" href="../index.html">
+                        <p>Recherche</p>
+                    </a>
+                </li>
+                <li>
+                    <a id="favoritesLink" href="../pages/favorites.html">
+                        <p>Favoris</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-btn">
+            <div class="menu-btn__burger"></div>
+        </div>
+    </header>
+
+    <main>
+        <section id="s1">
+            <h1>Titre de l'album</h1>
+            <a id="artistLink" href="">
+                <h2>Nom de l'artiste</h2>
+            </a>
+        </section>
+
+        <section id="s2">
+            <h2 class="seo">Nom de l'album</h2>
+            <div class="trackList">
+                <ul id="trackList">
+                    <li>
+                        <a id="trackLink" href=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div id="s2_rightSection">
+                <img src="#" alt="photo de l'album">
+                <a id="deezLink" class="button" href="#">Voir sur Deezer</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="../JS/menuBurger.js"></script>
+    <script src="../JS/album.js"></script>
+    <script src="../JS/secondsToHms.js"></script>
+</body>
+
+</html>
